@@ -2,8 +2,6 @@
 
 Click<a href="https://huddyhuda.github.io/project1b/"> here </a> to view demo of this game.
 
-<h4>References</h4>
-- For checking if input value matches the correct sring: 
 
 <h4>Jquery Plugins</h4>
 - WOW.min.js + Animate.css = for different types of animation.

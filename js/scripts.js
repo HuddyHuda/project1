@@ -55,25 +55,26 @@ function init () {
       goodjob.style.display = 'block'
     }
 
-    var word = 'Everybody Knows',
+    var word = 'everybody knows',
       input = document.querySelector('input'),
       submitBtn = document.querySelector('#submitBtn'),
       guess = document.querySelector('.num')
 
     function checkValueofWord () {
       var guessVal = guess.innerHTML
-      if (input.value != word) {
+      if (input.value != word.toLowerCase()) {
         input.classList.add('wrong')
         modal.style.display = 'block'
         showHint()
         input.classList.remove('correct')
-        if (input.value != word && guessVal <= 0) {
+        if (input.value != word.toLowerCase() && guessVal <= 0) {
           alert('no more guesses!')
+            location.reload();
         } else {
           guess.innerHTML = guessVal -= 1
         }
       }
-      else if (input.value == word) {
+      else if (input.value == word.toLowerCase()) {
         audio1.pause()
         showGoodJobAndHide()
 
@@ -130,25 +131,26 @@ function init () {
       goodjob2.style.display = 'block'
     }
 
-    var word2 = 'We Dont Talk Anymore',
+    var word2 = 'we don\'t talk anymore',
       input2 = document.querySelector('.input2'),
       submitBtn2 = document.querySelector('#submitBtn2'),
       guess2 = document.querySelector('.num2')
 
     function checkValueofWord2 () {
       var guessVal2 = guess2.innerHTML
-      if (input2.value != word2) {
+      if (input2.value != word2.toLowerCase()) {
         input2.classList.add('wrong')
         modal2.style.display = 'block'
         showHint2()
         input2.classList.remove('correct')
-        if (input2.value != word2 && guessVal2 <= 0) {
+        if (input2.value != word2.toLowerCase() && guessVal2 <= 0) {
           alert('no more guesses!')
+            location.reload();
         } else {
           guess2.innerHTML = guessVal2 -= 1
         }
       }
-      else if (input2.value == word2) {
+      else if (input2.value == word2.toLowerCase()) {
         audio2.pause()
         showGoodJobAndHide2()
 
@@ -208,25 +210,26 @@ function init () {
       goodjob3.style.display = 'block'
     }
 
-    var word3 = 'Diamonds',
+    var word3 = 'diamonds',
       input3 = document.querySelector('.input3'),
       submitBtn3 = document.querySelector('#submitBtn3'),
       guess3 = document.querySelector('.num3')
 
     function checkValueofWord3 () {
       var guessVal3 = guess3.innerHTML
-      if (input3.value != word3) {
+      if (input3.value != word3.toLowerCase()) {
         input3.classList.add('wrong')
         modal3.style.display = 'block'
         showHint3()
         input3.classList.remove('correct')
-        if (input3.value != word3 && guessVal3 <= 0) {
+        if (input3.value != word3.toLowerCase() && guessVal3 <= 0) {
           alert('no more guesses!')
+            location.reload();
         } else {
           guess3.innerHTML = guessVal3 -= 1
         }
       }
-      else if (input3.value == word3) {
+      else if (input3.value == word3.toLowerCase()) {
         audio3.pause()
         showGoodJobAndHide3()
 

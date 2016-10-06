@@ -17,4 +17,7 @@ Click<a href="https://huddyhuda.github.io/project1b/"> here </a> to view demo of
 <h4> What can be improved ? </h4>
 I repeated my function alot of times when it could be re-use with the correct methods.
 
+Flowchart <a href="https://www.draw.io/?chrome=0&lightbox=1&edit=https%3A%2F%2Fwww.draw.io%2F%23G0Bwcb6NHalqprOGdycjJqdVB0RFk&nav=1#G0Bwcb6NHalqprOGdycjJqdVB0RFk">here </a>.
+
+Wireframes <a href="https://classic.moqups.com/huddyhuda@gmail.com/C5EFcVIY">here</a>.
 

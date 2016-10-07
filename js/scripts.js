@@ -1,8 +1,8 @@
 function init () {
   var musicContainer1 = document.querySelector('.musicquestions1')
   var musicContainer2 = document.querySelector('.musicquestions2')
-    var musicContainer3 = document.querySelector('.musicquestions3')
-      var thankyou = document.querySelector('.thankyou')
+  var musicContainer3 = document.querySelector('.musicquestions3')
+  var thankyou = document.querySelector('.thankyou')
   var body = document.body
   var startBtn = document.querySelector('#startBtn')
   var submitBtn = document.querySelector('#submitBtn')
@@ -12,9 +12,12 @@ function init () {
   var guessdiv = document.querySelector('#guess')
   var containercontent = document.querySelector('.container-content')
   var restartgame = document.querySelector('.restart-game')
+  //pause audio at start first, if not it will play when the browser loads
   document.getElementById('audio1').pause()
+  //holds the instructions for the game
   var instructioncontainer = document.querySelector('.container-instruction-details')
 
+  //modal to prompt user its wrong
   var modal = document.querySelector('#myModal')
 
   // Get the button that opens the modal
@@ -32,34 +35,45 @@ function init () {
 
   startBtn.addEventListener('click', musicBegins)
 
+  // the moment the start button is clicked, the first music will start playing
   function musicBegins () {
     body.removeChild(instructioncontainer)
     body.classList = 'musicquestions1'
     musicContainer1.style.display = 'block'
+    // guess container that shows the number of tries is hidden at the first place
     guessdiv.style.display = 'none'
+    // start button dissapears with the instructions box
     startBtn.style.display = 'none'
+    //first audio starts playing
     audio1.play()
 
+    
+    // function to show hint
     function showHint () {
       closemodal.onclick = function () {
         modal.style.display = 'none'
+       // clear the input fields
         input.value = ''
         hintsingerjohn.style.display = 'block'
         $('.hint-singerjohn').delay(6000).fadeIn(500)
         guessdiv.style.display = 'block'
       }
     }
+    
+    // number of tries div will be hidden and good job note will be shown
 
     function showGoodJobAndHide () {
       guessdiv.style.display = 'none'
       goodjob.style.display = 'block'
     }
 
+    //first song value 
     var word = 'everybody knows',
       input = document.querySelector('input'),
       submitBtn = document.querySelector('#submitBtn'),
       guess = document.querySelector('.num')
 
+    //to check if the word that user type matches the first song value
     function checkValueofWord () {
       var guessVal = guess.innerHTML
       if (input.value != word.toLowerCase()) {
@@ -75,6 +89,7 @@ function init () {
         }
       }
       else if (input.value == word.toLowerCase()) {
+        //if its correct, audio will pause and it will show good job note
         audio1.pause()
         showGoodJobAndHide()
 
